@@ -51,7 +51,7 @@ Claude's working file. Ernest's own portfolio, not a client site: real person, f
 - Skills icons are inline SVG line drawings (_src/icons/skill-*.svg), not photos; not brand logos
 
 ## Decisions
-- Portfolio lives in `Website Portfolio/Portfolio Site/` (subfolder: the parent holds Ernest's raw material).
+- Portfolio lives in `<workspace>/Portfolio Site/` (subfolder: the workspace holds Ernest's raw material; `<workspace>` was named Website Portfolio until 2026-10-10).
 - Host: Cloudflare Pages (classic), https://ernestbanigon.pages.dev, project `ernestbanigon`. Not a Worker: that would read `ernestbanigon.ebanigon-previews.workers.dev`. Sample previews stay on the workers.dev subdomain, noindex.
 - Indexable deploy (no noindex): this is his real site and he sells SEO. Own script `tools/deploy_live.py` (Pages deploy + 200/indexable check); `tools/deploy.py` stays preview-only.
 - No contact form: there's no form backend, and a demo form would be a placeholder. Contact is a mailto link (a link, not a form action) plus copy-email button, LinkedIn and Facebook.

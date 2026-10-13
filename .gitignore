@@ -1,0 +1,12 @@
+# Rebuilt by _src/build.py and the QA tools
+dist/
+qa/
+.pipeline/img-cache/
+.pipeline/stage/
+__pycache__/
+*.pyc
+# Host CLI caches (the deploy state that matters lives in .pipeline/)
+.wrangler/
+.netlify/
+.impeccable/hook.cache.json
+*.stackdump

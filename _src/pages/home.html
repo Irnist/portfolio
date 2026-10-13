@@ -1,0 +1,125 @@
+<div class="hero-wrap">
+<div class="ambient" aria-hidden="true"></div>
+<section class="hero container" aria-labelledby="hero-title">
+  <div class="hero__text">
+    <h1 class="hero__title" id="hero-title"><span class="hero__hello caps">Hi! I’m Ernest</span> <span class="hero__role">A Web <em>Designer</em> &amp; <em>SEO</em> Specialist</span></h1>
+    <p class="hero__lede">With five years of experience in responsive web design and a strong background in graphic design, I create websites and visual branding that help businesses look professional and get found online.</p>
+    <div class="actions">
+      {{fn:cta}}
+      <a class="btn btn-ghost" href="#work">See the work</a>
+    </div>
+  </div>
+  <figure class="hero__photo">
+    <img src="assets/img/me/ernest-mar-banigon-v2.webp" alt="Ernest Mar Banigon" fetchpriority="high">
+  </figure>
+</section>
+</div>
+
+<section class="section" id="work" aria-labelledby="client-title">
+  <div class="container">
+    <header class="section__head">
+      <h2 id="client-title" data-gsap="split">Client websites</h2>
+      <p>Live sites I designed for local businesses and a nonprofit in the United States. Press “Scroll the page” on any screen to see the whole homepage.</p>
+    </header>
+    <ul class="work-grid work-grid--two" role="list">
+      {{fn:client_work}}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--rule" aria-labelledby="concept-title">
+  <div class="container">
+    <header class="section__head">
+      <h2 id="concept-title" data-gsap="split">Concept projects</h2>
+      <p>Self-initiated sites I planned, wrote, designed and built from start to finish, the same way I’d run a client project. They’re previews, not the businesses’ official websites.</p>
+    </header>
+    <ul class="work-grid work-grid--concept" role="list">
+      {{fn:concept_work}}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--rule" id="design" aria-labelledby="design-title">
+  <div class="container">
+    <header class="section__head">
+      <h2 id="design-title" data-gsap="split">Print and graphic design</h2>
+      <p>Tour promotions for Solasta Travel and Tours, from local island trips to group tours abroad. Each one has to sell a destination at a glance, then carry the dates, inclusions and price without crowding the photos. Select a poster to see it full size.</p>
+    </header>
+    <ul class="poster-grid" role="list">
+      {{fn:posters}}
+    </ul>
+  </div>
+</section>
+
+<section class="section skills" id="skills" aria-labelledby="skills-title">
+  <div class="ambient ambient--skills" aria-hidden="true"></div>
+  <div class="container">
+    <h2 class="skills__title" id="skills-title">Skills</h2>
+    <ul class="skills__grid" role="list">
+      {{fn:skills}}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="process" aria-labelledby="process-title">
+  <div class="container process">
+    <div class="process__intro">
+      <h2 id="process-title" data-gsap="split">How a project works</h2>
+      <figure class="process__photo sheet"><img src="assets/img/stock/process-sketch.webp" alt="A hand sketching website wireframes on paper with an orange pen" loading="lazy" decoding="async"></figure>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Get to know the business</h3>
+        <p>We talk about your customers, what they search for, and what the site has to do for you: bring in calls, bookings or quote requests.</p>
+      </li>
+      <li>
+        <h3>Design the homepage</h3>
+        <p>I design the homepage from your brand, photos and story. You review it before anything else is built, and it sets the look for every other page.</p>
+      </li>
+      <li>
+        <h3>Build every page</h3>
+        <p>Responsive pages, checked on phones and desktops, with fast-loading images and text that stays readable on every background.</p>
+      </li>
+      <li>
+        <h3>Set up search and launch</h3>
+        <p>Page titles, descriptions, headings and site structure are set up for search engines, then the site goes live on your domain.</p>
+      </li>
+    </ol>
+    <dl class="terms">
+      <div>
+        <dt>Pricing</dt>
+        <dd>You get a written quote before any work starts. It depends on how many pages the site needs and what they have to do.</dd>
+      </div>
+      <div>
+        <dt>Timeline</dt>
+        <dd>The quote comes with a schedule. The biggest factor is usually how soon your text and photos are ready.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="contact-band" id="contact" data-surface="dark" aria-labelledby="contact-title">
+  <div class="container contact-band__layout">
+  <div class="contact-band__inner">
+    <h2 id="contact-title" data-gsap="split">Have a project in mind?</h2>
+    <p class="contact-band__lede">Tell me about your business and what the website needs to do.</p>
+    <p class="contact-band__email"><a href="{{EMAIL_HREF}}">{{EMAIL_HTML}}</a></p>
+    <p class="contact-band__phone"><a class="icon-row" href="{{PHONE_HREF}}">{{i:phone}}<span class="nowrap">{{PHONE}}</span></a></p>
+    <div class="contact-band__actions">
+      <button class="btn btn-ghost" type="button" data-copy="{{EMAIL}}" hidden>Copy email address</button>
+      <span class="copy-status" role="status" data-copy-status></span>
+    </div>
+    <p class="contact-band__next" data-next-steps>{{NEXT_STEPS}}</p>
+    {{> social}}
+  </div>
+  <figure class="contact-band__photo sheet"><img src="assets/img/stock/contact-notes.webp" alt="An open notebook headed “Notes” with a fountain pen and glasses" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<dialog class="lightbox" data-lightbox-dialog aria-label="Poster, full size">
+  <form method="dialog" class="lightbox__bar">
+    <p class="lightbox__caption" data-lightbox-caption></p>
+    <button class="btn btn-ghost lightbox__close" type="submit">Close</button>
+  </form>
+  <div class="lightbox__frame" data-lightbox-frame></div>
+</dialog>

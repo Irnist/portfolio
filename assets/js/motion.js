@@ -106,8 +106,8 @@
         if (on === down) return;
         down = on;
         gsap.to(img, on
-          ? { y: () => -(img.offsetHeight - screen.clientHeight), duration: 7, ease: 'sine.inOut', overwrite: true }
-          : { y: 0, duration: 0.9, ease: 'power2.out', overwrite: true });
+          ? { y: () => -(img.offsetHeight - screen.clientHeight), duration: 7, ease: 'sine.inOut', overwrite: 'auto' }
+          : { y: 0, duration: 0.9, ease: 'power2.out', overwrite: 'auto' });
       };
       let hovered = false;
       const sync = () => go(hovered || work.classList.contains('is-playing'));
@@ -143,7 +143,7 @@
         open = now;
         if (getComputedStyle(nav).position !== 'fixed') return;  // desktop: the nav is inline, nothing to animate
         gsap.fromTo(nav, { autoAlpha: now ? 0 : 1, y: now ? -8 : 0 }, { autoAlpha: now ? 1 : 0, y: now ? 0 : -8,
-          duration: 0.2, ease: now ? 'power2.out' : 'power2.in', overwrite: true, clearProps: 'opacity,visibility,transform' });
+          duration: 0.2, ease: now ? 'power2.out' : 'power2.in', overwrite: 'auto', clearProps: 'opacity,visibility,transform' });
       });
     }
 

@@ -39,8 +39,8 @@ ALLOW_REPEAT_TEXT = []
 PAGES = [
     dict(file="index.html", src="home.html", nav=None,
          title="Ernest Mar Banigon | Web Designer & SEO Specialist",
-         desc="Ernest Mar Banigon designs responsive, search-ready websites for small businesses, "
-              "backed by five years of web design and a graphic design background. See his client work."),
+         desc="Ernest Mar Banigon designs responsive, search-ready small-business websites, "
+              "backed by five years of web design and a graphic design background. See his work."),
     dict(file="404.html", src="404.html", nav=None, title="Page not found", desc="", body_class="page-404"),
 ]
 

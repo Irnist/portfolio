@@ -98,6 +98,7 @@ Claude's working file. Ernest's own portfolio, not a client site: real person, f
 - My first motion test screenshot showed the wrong section — self — the site's `scroll-behavior: smooth` turned `scrollIntoView` + `scrollBy` into an interrupted smooth scroll — test scripts scroll with `behavior: 'instant'` — LESSONS L-054 note.
 - Files spread over absolute paths outside the workspace (AppData scratchpad, `%LOCALAPPDATA%` Edge profile, hard-coded Desktop paths in the pipeline docs and tools) — user, 2026-10-10 — no defined workspace — everything now lives in `Desktop\Website Portfolio` (scratch in `_temp/`, screenshots only in `Portfolio Screenshots/`), and `qa.py` warns on hard-coded user paths — LESSONS L-055. In the same pass, a test that `chdir`ed into the template wrote planted copies to `template/_temp/` — self — moved out; the scaffold now skips `_temp`.
 - A `sed` edit mangled a backslash Windows path in a test script — self — shell editing again — fixed with Edit — LESSONS L-027 Seen.
+- 2026-10-13 motion.js used `overwrite: true` on the screen-pan and mobile-menu tweens (L-068), and the homepage meta description was 171 characters — caught by qa.py once the site ran the shared tools (the old copied tools predated both checks) — `overwrite: 'auto'`; description cut to 158 ("…small-business websites… See his work."). Not redeployed: the live site needs the user's go-ahead.
 
 ## Deferred questions
 - Reply time and quote wording in Process/Contact: confirm or change.

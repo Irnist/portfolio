@@ -17,8 +17,19 @@ import sys
 import time
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from deploy import DIST, ROOT, check, refuse_stale_cache, save_state, wrangler  # noqa: E402
+import importlib.util  # noqa: E402
+
+# tools/deploy.py here is a stub that *runs* the pipeline's shared deploy (a noindex preview), so importing it
+# would deploy a preview first (L-080). Load the shared module itself, without running its main().
+HERE = Path(__file__).resolve()
+os.environ.setdefault("SITE_ROOT", str(HERE.parent.parent))
+_shared = next((t for t in (p / "Workflow and Pipeline" / "website-pipeline" / "tools" / "deploy.py" for p in HERE.parents)
+                if t.is_file()), None) or sys.exit("deploy_live: no Workflow and Pipeline/website-pipeline/tools/deploy.py above this site")
+_spec = importlib.util.spec_from_file_location("pipeline_deploy", _shared)
+_deploy = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_deploy)
+DIST, ROOT, check, refuse_stale_cache, save_state, wrangler = (
+    _deploy.DIST, _deploy.ROOT, _deploy.check, _deploy.refuse_stale_cache, _deploy.save_state, _deploy.wrangler)
 
 PROJECT = "ernestbanigon"
 URL = f"https://{PROJECT}.pages.dev"  # matches DOMAIN in _src/site_config.py

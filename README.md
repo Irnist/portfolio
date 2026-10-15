@@ -1,4 +1,4 @@
-# Ernest Mar Banigon: portfolio
+# Ernest Mar Banigon: Portfolio
 
 My personal portfolio as a web designer and SEO specialist.
 

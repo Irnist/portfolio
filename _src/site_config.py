@@ -12,6 +12,8 @@ BIZ = {
     "EMAIL": "banigon40@gmail.com",
     "FACEBOOK": "https://www.facebook.com/ernestmar14",
     "LINKEDIN": "https://www.linkedin.com/in/ernest-mar-banigon-052253248/",
+    "GITHUB": "https://github.com/Irnist",
+    "FIVERR": "https://www.fiverr.com/ernest_mar",  # from Ernest, 2026-10-15 (his link minus ?public_mode=true)
     # Shown above the contact links: who replies, how fast, what happens next. A promise: Ernest confirms it.
     "NEXT_STEPS": "I read every message myself and reply by email within one business day, usually with a few questions about your business and a written quote.",
 }
@@ -196,7 +198,7 @@ def h_person_ld(page, arg=None):
         "telephone": BIZ["PHONE"].replace(" ", ""),
         "url": DOMAIN + "/",
         "image": DOMAIN + "/assets/img/me/ernest-mar-banigon-v2.webp",
-        "sameAs": [BIZ["LINKEDIN"], BIZ["FACEBOOK"]],
+        "sameAs": [BIZ["LINKEDIN"], BIZ["GITHUB"], BIZ["FIVERR"], BIZ["FACEBOOK"]],
         "knowsAbout": ["Web design", "Responsive web design", "Search engine optimization", "Graphic design",
                        "Duda", "Adobe Photoshop", "Adobe Illustrator", "Canva", "WordPress", "Claude Code",
                        "Adobe Lightroom", "HTML", "CSS"],
